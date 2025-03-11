@@ -33,20 +33,14 @@ function mostrarNombres(){
     }
 }
 
-function elegirAmigo(){
+function sortearAmigo(){
     if (nombres.length < 2){
         alert(mensajeDeError[2])
         return;
     }
 
-    let posicionAmigoAleatorio = Math.floor(Math.random() * nombres.length);
-
-    return posicionAmigoAleatorio;
-}
-
-function sortearAmigo(){
     let amigoSecreto = document.getElementById("resultado");
-    let indice = elegirAmigo();
+    let indice = Math.floor(Math.random() * nombres.length);
 
     amigoSecreto.innerText = "";
 
